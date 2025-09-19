@@ -1,0 +1,105 @@
+'use client'
+
+import { profileData } from '@/data/profile'
+import { Download, Menu, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMenuOpen(false)
+  }
+
+  const downloadCV = () => {
+    console.log('Download CV')
+  }
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
+      <nav className="container-max section-padding">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center space-x-3">
+            <div className="relative">
+              <img
+                src='https://media.licdn.com/dms/image/v2/C4D03AQG51t3A-BeKiQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1557934019866?e=2147483647&v=beta&t=U_y9Wg8gb4-2khXfkayAkHd7o5tpJ7OVMXTVoo8rtnI'
+                alt='Gabriel Tamura - Head de Tecnologia'
+                className="w-10 h-10 rounded-full object-cover border-2 border-executive-200 shadow-sm hover:border-executive-400 transition-all duration-300"
+              />
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-executive-600 rounded-full border-2 border-white"></div>
+            </div>
+            <span className="text-xl font-bold text-executive-800">{profileData.name}</span>
+          </div>
+
+          <div className="hidden md:flex items-center space-x-8">
+            {['sobre', 'experiencia', 'educacao', 'projetos', 'contato'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="text-executive-700 hover:text-executive-900 transition-colors duration-200 capitalize font-medium"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+
+          <div className="hidden md:flex items-center space-x-4">
+            <button
+              onClick={downloadCV}
+              className="flex items-center space-x-2 bg-executive-700 text-white px-4 py-2 rounded-lg hover:bg-executive-800 transition-colors duration-200"
+            >
+              <Download size={16} />
+              <span>Download CV</span>
+            </button>
+          </div>
+
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4">
+              {['sobre', 'experiencia', 'educacao', 'projetos', 'contato'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className="text-left text-executive-700 hover:text-executive-900 transition-colors duration-200 capitalize font-medium py-2"
+                >
+                  {item}
+                </button>
+              ))}
+              <button
+                onClick={downloadCV}
+                className="flex items-center justify-center space-x-2 bg-executive-700 text-white px-4 py-2 rounded-lg hover:bg-executive-800 transition-colors duration-200 w-full"
+              >
+                <Download size={16} />
+                <span>Download CV</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  )
+}

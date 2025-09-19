@@ -1,0 +1,39 @@
+{
+  "autocomplete": {
+    "enabled": true,
+    "contextual": true,
+    "speed": "fast",
+    "action": "research_solutions",
+    "objective": true,
+    "research_depth": "high"
+  },
+  "error_prediction": {
+    "enabled": true,
+    "depth": "high",
+    "improvement_suggestions": true,
+    "objective": true
+  },
+  "refactoring": {
+    "enabled": true,
+    "auto_refactor": true,
+    "level": "advanced",
+    "focus": "performance"
+  },
+  "contextual_suggestions": {
+    "enabled": true,
+    "alternative_methods": true,
+    "comparison": true
+  },
+  "research_assistant": {
+    "enabled": true,
+    "auto_search": true,
+    "integrate_with_resources": ["Stack Overflow", "MDN", "GitHub", "Documentação oficial"],
+    "suggest_best_solution": true
+  },
+  "interface": {
+    "theme": "dark",
+    "cursor_style": "block",
+    "feedback_mode": "concise",
+    "error_highlighting": true
+  }
+}
