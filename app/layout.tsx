@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gabriel-tamura.vercel.app'),
-  title: 'Gabriel Tamura - Head de Tecnologia',
-  description: 'Head de Tecnologia com 6+ anos em transformação digital e arquitetura enterprise. Especializado em redução de custos operacionais e otimização de times.',
+  title: 'gabriel tamura - head de tecnologia',
+  description: 'head de tecnologia com 6+ anos em transformação digital e arquitetura enterprise. especializado em redução de custos operacionais e otimização de times.',
   keywords: 'head de tecnologia, desenvolvedor, full stack, react, nextjs, javascript, typescript, nodejs, arquitetura enterprise',
   authors: [{ name: 'Gabriel Tamura' }],
   robots: 'index, follow',
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Gabriel Tamura - Head de Tecnologia',
-    description: 'Head de Tecnologia com 6+ anos em transformação digital e arquitetura enterprise.',
+    title: 'gabriel tamura - head de tecnologia',
+    description: 'head de tecnologia com 6+ anos em transformação digital e arquitetura enterprise.',
     type: 'website',
     locale: 'pt_BR',
     url: 'https://gabriel-tamura.vercel.app',
-    siteName: 'Gabriel Tamura - Currículo Digital',
+    siteName: 'gabriel tamura - currículo digital',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gabriel Tamura - Head de Tecnologia',
-    description: 'Head de Tecnologia com 6+ anos em transformação digital e arquitetura enterprise.',
+    title: 'gabriel tamura - head de tecnologia',
+    description: 'head de tecnologia com 6+ anos em transformação digital e arquitetura enterprise.',
   },
 }
 
