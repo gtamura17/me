@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   keywords: 'head de tecnologia, desenvolvedor, full stack, react, nextjs, javascript, typescript, nodejs, arquitetura enterprise',
   authors: [{ name: 'Gabriel Tamura' }],
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'Gabriel Tamura - Head de Tecnologia',
     description: 'Head de Tecnologia com 6+ anos em transformação digital e arquitetura enterprise.',
