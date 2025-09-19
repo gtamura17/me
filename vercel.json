@@ -2,10 +2,27 @@
   "buildCommand": "npm run build",
   "outputDirectory": "out",
   "framework": "nextjs",
+  "functions": {
+    "app/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
   "rewrites": [
     {
+      "source": "/pt/(.*)",
+      "destination": "/pt/$1"
+    },
+    {
+      "source": "/en/(.*)",
+      "destination": "/en/$1"
+    },
+    {
+      "source": "/es/(.*)",
+      "destination": "/es/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/pt/$1"
     }
   ]
 }

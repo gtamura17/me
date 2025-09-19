@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "scrollDown": "Scroll",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "yearsExperience": "Years of Experience",
+    "yearsExperienceDesc": "Developing modern and scalable web solutions",
+    "projectsCompleted": "Projects Completed",
+    "projectsCompletedDesc": "Various projects for clients and personal",
+    "technologies": "Technologies",
+    "technologiesDesc": "Expertise in various modern technologies"
+  },
+  "skills": {
+    "title": "Technical leadership & business impact",
+    "description": "Head of Technology with dual expertise: strategic management of multidisciplinary teams and technical specialization in scalable SaaS architectures. Led teams of up to 15+ developers in creating enterprise platforms for Mary Kay, Smart House and other clients, combining business vision with technical excellence.",
+    "costReduction": "Cost reduction",
+    "infrastructure": "Infrastructure",
+    "experience": "Experience",
+    "years": "Years",
+    "optimization": "Optimization",
+    "efficiency": "Efficiency",
+    "automations": "Automations",
+    "tools": "Tools",
+    "strategicLeadership": "Proven results & technology strategy",
+    "achievements": {
+      "costOptimization": {
+        "title": "Cost Optimization",
+        "description": "60% reduction in infrastructure costs",
+        "details": "Migration to hybrid cloud, microservices, resource automation"
+      },
+      "teamEfficiency": {
+        "title": "Team Efficiency",
+        "description": "120% increase in team productivity",
+        "details": "Implementation of tools like Coderabit, TestSprite, Power BI automations"
+      },
+      "enterpriseArchitecture": {
+        "title": "Enterprise Architecture",
+        "description": "Scalable systems for thousands of users",
+        "details": "Microservices, REST/GraphQL APIs, databases, security, monitoring"
+      },
+      "automationAI": {
+        "title": "Automation & AI",
+        "description": "15+ automation tools implemented",
+        "details": "NLP for auditing, sprint management, predictive KPI analysis"
+      },
+      "itGovernance": {
+        "title": "IT Governance",
+        "description": "Processes and standards for enterprise scale",
+        "details": "CI/CD, code review, automated testing, quality metrics"
+      },
+      "roiMetrics": {
+        "title": "ROI & Metrics",
+        "description": "Focus on cost vs benefit tradeoff",
+        "details": "Tool evaluation, POCs, migrations with measurable return"
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "technologies": "Technologies:",
+    "achievements": "Key Achievements:"
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "additionalCertifications": "Additional Certifications",
+    "continuousLearning": "Continuous Learning",
+    "continuousLearningDesc": "Always seeking new technologies and methodologies to improve my skills.",
+    "focus": "Focus on algorithms, data structures and software development",
+    "leadership": "Responsible for leading technology and innovation, structuring processes and applying automation at scale."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "technologies": "Technologies:",
+    "code": "Code",
+    "demo": "Demo",
+    "moreProjects": "Interested in seeing more projects?",
+    "moreProjectsDesc": "Check out my GitHub to see all projects and contributions.",
+    "viewOnGitHub": "View on GitHub"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "I'm always open to new opportunities and interesting projects. Let's talk about how I can help you!",
+    "contactInfo": "Contact Information",
+    "socialNetworks": "Social Networks",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "phone": "Phone",
+    "location": "Location",
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "subject": "Message subject",
+      "message": "Your message"
+    }
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "by": "by"
+  }
+}

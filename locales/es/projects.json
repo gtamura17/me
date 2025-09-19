@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Samsung E-commerce",
+      "description": "Plataforma de e-commerce para Samsung enfocada en escalabilidad y experiencia del usuario."
+    },
+    {
+      "id": "2",
+      "name": "Mary Kay",
+      "description": "Solución de e-commerce White Label personalizada para Mary Kay, integrada con sistemas de pago."
+    },
+    {
+      "id": "3",
+      "name": "Dengo Chocolates",
+      "description": "Plataforma de e-commerce premium con experiencia digital diferenciada."
+    },
+    {
+      "id": "4",
+      "name": "Proyectos Enterprise",
+      "description": "Trabajo en proyectos empresariales para clientes como PalmerJane, Asics, Electrolux, Adyen, Acer, Mondial, Colgate, Sadia, Itatiaia, Grupo Angeloni, Brastemp, Decathlon, Saint Gobain, Decminas, Interfood San Marche, Made y Lojas Rede."
+    },
+    {
+      "id": "5",
+      "name": "Monitfy",
+      "description": "SaaS propietario para gestión de operaciones y monitoreo inteligente."
+    },
+    {
+      "id": "6",
+      "name": "Lomadee",
+      "description": "Plataforma de marketing de afiliados White Label con generación de ingresos y alta escalabilidad."
+    }
+  ]
+}

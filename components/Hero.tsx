@@ -1,10 +1,14 @@
 'use client'
 
 import { profileData } from '@/data/profile'
+import { useTranslation } from '@/hooks/useTranslation'
 import { motion } from 'framer-motion'
-import { ChevronDown, Github, Globe, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
+import { Github, Globe, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 
 export default function Hero() {
+  const { t, getProfileData } = useTranslation()
+  const currentProfileData = getProfileData(profileData)
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -21,18 +25,18 @@ export default function Hero() {
       </div>
 
       <div className="container-max section-padding relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto mt-20">
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-executive-200 shadow-xl"
+            className="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-executive-200 shadow-xl"
           >
-            <img
-              src="https://media.licdn.com/dms/image/v2/C4D03AQG51t3A-BeKiQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1557934019866?e=2147483647&v=beta&t=U_y9Wg8gb4-2khXfkayAkHd7o5tpJ7OVMXTVoo8rtnI"
-              alt="Gabriel Tamura - Head de Tecnologia"
-              className="w-full h-full object-cover"
-            />
+             <img
+               src="/assets/me_photo.jpeg"
+               alt="Gabriel Tamura - Head de Tecnologia"
+               className="w-full h-full object-cover object-center scale-125"
+             />
           </motion.div>
 
           <motion.h1
@@ -41,7 +45,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-5xl md:text-6xl font-bold text-gray-900 mb-4"
           >
-            {profileData.name}
+            {currentProfileData.name}
           </motion.h1>
 
           <motion.p
@@ -50,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-2xl md:text-3xl gradient-text font-semibold mb-6"
           >
-            {profileData.title}
+            {currentProfileData.title}
           </motion.p>
 
           <motion.p
@@ -59,7 +63,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            {profileData.about}
+            {currentProfileData.about}
           </motion.p>
 
           <motion.div
@@ -69,22 +73,22 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-6 mb-12"
           >
             <a
-              href={`mailto:${profileData.email}`}
+              href={`mailto:${currentProfileData.email}`}
               className="flex items-center space-x-2 text-gray-600 hover:text-executive-700 transition-colors duration-200"
             >
               <Mail size={20} />
-              <span>{profileData.email}</span>
+              <span>{currentProfileData.email}</span>
             </a>
             <a
-              href={`tel:${profileData.phone}`}
+              href={`tel:${currentProfileData.phone}`}
               className="flex items-center space-x-2 text-gray-600 hover:text-executive-700 transition-colors duration-200"
             >
               <Phone size={20} />
-              <span>{profileData.phone}</span>
+              <span>{currentProfileData.phone}</span>
             </a>
             <div className="flex items-center space-x-2 text-gray-600">
               <MapPin size={20} />
-              <span>{profileData.location}</span>
+              <span>{currentProfileData.location}</span>
             </div>
           </motion.div>
 
@@ -136,18 +140,18 @@ export default function Hero() {
               onClick={() => scrollToSection('projetos')}
               className="px-8 py-3 bg-executive-700 text-white rounded-lg hover:bg-executive-800 transition-colors duration-200 font-semibold"
             >
-              Ver Projetos
+              {t('hero.viewProjects')}
             </button>
             <button
               onClick={() => scrollToSection('contato')}
               className="px-8 py-3 border-2 border-executive-700 text-executive-700 rounded-lg hover:bg-executive-700 hover:text-white transition-all duration-200 font-semibold"
             >
-              Entrar em Contato
+              {t('hero.getInTouch')}
             </button>
           </motion.div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
@@ -157,7 +161,7 @@ export default function Hero() {
             onClick={() => scrollToSection('sobre')}
             className="flex flex-col items-center text-gray-400 hover:text-executive-700 transition-colors duration-200"
           >
-            <span className="text-sm mb-2">Scroll</span>
+            <span className="text-sm mb-2">{t('hero.scrollDown')}</span>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -165,7 +169,7 @@ export default function Hero() {
               <ChevronDown size={24} />
             </motion.div>
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "about": "Acerca",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV"
+  },
+  "hero": {
+    "scrollDown": "Desplazar",
+    "viewProjects": "Ver Proyectos",
+    "getInTouch": "Ponerse en Contacto"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "yearsExperience": "Años de Experiencia",
+    "yearsExperienceDesc": "Desarrollando soluciones web modernas y escalables",
+    "projectsCompleted": "Proyectos Completados",
+    "projectsCompletedDesc": "Varios proyectos para clientes y personales",
+    "technologies": "Tecnologías",
+    "technologiesDesc": "Experiencia en diversas tecnologías modernas"
+  },
+  "skills": {
+    "title": "Liderazgo técnico e impacto empresarial",
+    "description": "Head de Tecnología con doble experiencia: gestión estratégica de equipos multidisciplinarios y especialización técnica en arquitecturas SaaS escalables. Lideré equipos de hasta 15+ desarrolladores en la creación de plataformas empresariales para Mary Kay, Smart House y otros clientes, combinando visión de negocio con excelencia técnica.",
+    "costReduction": "Reducción de costos",
+    "infrastructure": "Infraestructura",
+    "experience": "Experiencia",
+    "years": "Años",
+    "optimization": "Optimización",
+    "efficiency": "Eficiencia",
+    "automations": "Automatizaciones",
+    "tools": "Herramientas",
+    "strategicLeadership": "Resultados probados y estrategia tecnológica",
+    "achievements": {
+      "costOptimization": {
+        "title": "Optimización de Costos",
+        "description": "Reducción del 60% en costos de infraestructura",
+        "details": "Migración a nube híbrida, microservicios, automatización de recursos"
+      },
+      "teamEfficiency": {
+        "title": "Eficiencia de Equipos",
+        "description": "Aumento del 120% en productividad de equipos",
+        "details": "Implementación de herramientas como Coderabit, TestSprite, automatizaciones Power BI"
+      },
+      "enterpriseArchitecture": {
+        "title": "Arquitectura Enterprise",
+        "description": "Sistemas escalables para miles de usuarios",
+        "details": "Microservicios, APIs REST/GraphQL, bases de datos, seguridad, monitoreo"
+      },
+      "automationAI": {
+        "title": "Automatización e IA",
+        "description": "15+ herramientas de automatización implementadas",
+        "details": "NLP para auditoría, gestión de sprints, análisis predictivo de KPIs"
+      },
+      "itGovernance": {
+        "title": "Gobernanza de TI",
+        "description": "Procesos y estándares para escala empresarial",
+        "details": "CI/CD, revisión de código, pruebas automatizadas, métricas de calidad"
+      },
+      "roiMetrics": {
+        "title": "ROI y Métricas",
+        "description": "Enfoque en equilibrio costo vs beneficio",
+        "details": "Evaluación de herramientas, POCs, migraciones con retorno medible"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "technologies": "Tecnologías:",
+    "achievements": "Logros Principales:"
+  },
+  "education": {
+    "title": "Educación y Certificaciones",
+    "additionalCertifications": "Certificaciones Adicionales",
+    "continuousLearning": "Aprendizaje Continuo",
+    "continuousLearningDesc": "Siempre buscando nuevas tecnologías y metodologías para mejorar mis habilidades.",
+    "focus": "Enfoque en algoritmos, estructuras de datos y desarrollo de software",
+    "leadership": "Responsable de liderar tecnología e innovación, estructurando procesos y aplicando automatización a escala."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "technologies": "Tecnologías:",
+    "code": "Código",
+    "demo": "Demo",
+    "moreProjects": "¿Interesado en ver más proyectos?",
+    "moreProjectsDesc": "Consulta mi GitHub para ver todos los proyectos y contribuciones.",
+    "viewOnGitHub": "Ver en GitHub"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "description": "Siempre estoy abierto a nuevas oportunidades y proyectos interesantes. ¡Hablemos sobre cómo puedo ayudarte!",
+    "contactInfo": "Información de Contacto",
+    "socialNetworks": "Redes Sociales",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "sendMessage": "Enviar Mensaje",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@email.com",
+      "subject": "Asunto del mensaje",
+      "message": "Tu mensaje"
+    }
+  },
+  "footer": {
+    "madeWith": "Hecho con",
+    "by": "por"
+  }
+}

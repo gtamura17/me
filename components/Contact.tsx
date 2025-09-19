@@ -1,10 +1,14 @@
 'use client'
 
 import { profileData } from '@/data/profile'
+import { useTranslation } from '@/hooks/useTranslation'
 import { motion } from 'framer-motion'
 import { Github, Globe, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react'
 
 export default function Contact() {
+  const { t, getProfileData } = useTranslation()
+  const currentProfileData = getProfileData(profileData)
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('Form submitted')
@@ -21,12 +25,11 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Entre em Contato
+            {t('contact.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-executive-600 to-executive-800 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Estou sempre aberto a novas oportunidades e projetos interessantes.
-            Vamos conversar sobre como posso ajudar você!
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -39,7 +42,7 @@ export default function Contact() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-8">
-                Informações de Contato
+                {t('contact.contactInfo')}
               </h3>
 
               <div className="space-y-6">
@@ -48,12 +51,12 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-executive-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Email</p>
+                    <p className="text-sm text-gray-500">{t('contact.email')}</p>
                     <a
-                      href={`mailto:${profileData.email}`}
+                      href={`mailto:${currentProfileData.email}`}
                       className="text-gray-900 hover:text-executive-600 transition-colors duration-200"
                     >
-                      {profileData.email}
+                      {currentProfileData.email}
                     </a>
                   </div>
                 </div>
@@ -63,12 +66,12 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-executive-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Telefone</p>
+                    <p className="text-sm text-gray-500">{t('contact.phone')}</p>
                     <a
-                      href={`tel:${profileData.phone}`}
+                      href={`tel:${currentProfileData.phone}`}
                       className="text-gray-900 hover:text-executive-600 transition-colors duration-200"
                     >
-                      {profileData.phone}
+                      {currentProfileData.phone}
                     </a>
                   </div>
                 </div>
@@ -78,20 +81,20 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-executive-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Localização</p>
-                    <p className="text-gray-900">{profileData.location}</p>
+                    <p className="text-sm text-gray-500">{t('contact.location')}</p>
+                    <p className="text-gray-900">{currentProfileData.location}</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-12">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                  Redes Sociais
+                  {t('contact.socialNetworks')}
                 </h4>
                 <div className="flex space-x-4">
-                  {profileData.github && (
+                  {currentProfileData.github && (
                     <a
-                      href={profileData.github}
+                      href={currentProfileData.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-executive-100 hover:text-executive-600 transition-all duration-200"
@@ -99,9 +102,9 @@ export default function Contact() {
                       <Github size={20} />
                     </a>
                   )}
-                  {profileData.linkedin && (
+                  {currentProfileData.linkedin && (
                     <a
-                      href={profileData.linkedin}
+                      href={currentProfileData.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-executive-100 hover:text-executive-600 transition-all duration-200"
@@ -109,9 +112,9 @@ export default function Contact() {
                       <Linkedin size={20} />
                     </a>
                   )}
-                  {profileData.website && (
+                  {currentProfileData.website && (
                     <a
-                      href={profileData.website}
+                      href={currentProfileData.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-executive-100 hover:text-executive-600 transition-all duration-200"
@@ -131,14 +134,14 @@ export default function Contact() {
             >
               <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Envie uma Mensagem
+                  {t('contact.sendMessage')}
                 </h3>
 
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nome
+                        {t('contact.name')}
                       </label>
                       <input
                         type="text"
@@ -146,12 +149,12 @@ export default function Contact() {
                         name="name"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-executive-500 focus:border-transparent transition-all duration-200"
-                        placeholder="Seu nome"
+                        placeholder={t('contact.placeholders.name')}
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email
+                        {t('contact.email')}
                       </label>
                       <input
                         type="email"
@@ -159,14 +162,14 @@ export default function Contact() {
                         name="email"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-executive-500 focus:border-transparent transition-all duration-200"
-                        placeholder="seu@email.com"
+                        placeholder={t('contact.placeholders.email')}
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Assunto
+                      {t('contact.subject')}
                     </label>
                     <input
                       type="text"
@@ -174,13 +177,13 @@ export default function Contact() {
                       name="subject"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-executive-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Assunto da mensagem"
+                      placeholder={t('contact.placeholders.subject')}
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Mensagem
+                      {t('contact.message')}
                     </label>
                     <textarea
                       id="message"
@@ -188,7 +191,7 @@ export default function Contact() {
                       rows={5}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-executive-500 focus:border-transparent transition-all duration-200 resize-none"
-                      placeholder="Sua mensagem aqui..."
+                      placeholder={t('contact.placeholders.message')}
                     />
                   </div>
 
@@ -197,7 +200,7 @@ export default function Contact() {
                     className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-executive-600 text-white rounded-lg hover:bg-executive-700 transition-colors duration-200 font-semibold"
                   >
                     <Send size={20} />
-                    <span>Enviar Mensagem</span>
+                    <span>{t('contact.sendMessage')}</span>
                   </button>
                 </div>
               </form>

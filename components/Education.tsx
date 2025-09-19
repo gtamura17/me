@@ -1,10 +1,13 @@
 'use client'
 
 import { profileData } from '@/data/profile'
+import { useTranslation } from '@/hooks/useTranslation'
 import { motion } from 'framer-motion'
 import { BookOpen, Calendar, GraduationCap } from 'lucide-react'
 
 export default function Education() {
+  const { t, getProfileData, getTranslatedDescription, getTranslatedDegree, getTranslatedPeriod } = useTranslation()
+  const currentProfileData = getProfileData(profileData)
   return (
     <section id="educacao" className="py-20 bg-white">
       <div className="container-max section-padding">
@@ -16,14 +19,14 @@ export default function Education() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Educação & Certificações
+            {t('education.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-executive-600 to-executive-800 mx-auto"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            {profileData.education.map((edu, index) => (
+            {currentProfileData.education.map((edu: any, index: number) => (
               <motion.div
                 key={edu.id}
                 initial={{ y: 30, opacity: 0 }}
@@ -39,7 +42,7 @@ export default function Education() {
 
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-900 mb-1">
-                      {edu.degree}
+                      {getTranslatedDegree(edu.id, edu.degree)}
                     </h3>
                     <p className="text-executive-600 font-semibold mb-2">
                       {edu.institution}
@@ -47,12 +50,12 @@ export default function Education() {
 
                     <div className="flex items-center text-gray-500 mb-3">
                       <Calendar size={16} className="mr-2" />
-                      <span className="text-sm">{edu.period}</span>
+                      <span className="text-sm">{getTranslatedPeriod(edu.period)}</span>
                     </div>
 
                     {edu.description && (
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        {edu.description}
+                        {getTranslatedDescription('education', edu.id, edu.description)}
                       </p>
                     )}
                   </div>
@@ -71,10 +74,10 @@ export default function Education() {
             <div className="text-center">
               <BookOpen className="w-12 h-12 text-executive-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Aprendizado Contínuo
+                {t('education.continuousLearning')}
               </h3>
               <p className="text-gray-600 mb-4">
-                Sempre buscando me atualizar com as mais recentes tecnologias e melhores práticas do mercado.
+                {t('education.continuousLearningDesc')}
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {['React', 'TypeScript', 'Node.js', 'AWS', 'Docker', 'Kubernetes'].map((tech) => (

@@ -59,13 +59,13 @@ export const profileData: Profile = {
   "email": "eu@gtamura.com",
   "phone": "+55 (11) 97727-8952",
   "location": "São Bernardo do Campo, SP - Brasil",
-  "website": "https://gabrieltamura.dev",
+  "website": "https://www.gtamura.com",
   "github": "https://github.com/gtamura17",
   "linkedin": "https://www.linkedin.com/in/gabriel-tamura-mamiya-091ba6143/",
-  "about": "Head de Tecnologia e Líder Técnico com experiência em gestão de times, arquitetura de SaaS escaláveis e transformação digital. Atuei na criação e evolução de plataformas de e-commerce e health tech, levando soluções para clientes enterprise como Mary Kay e Smart House. Minha trajetória une desenvolvimento full stack (React, Node.js, Next.js) com gestão de equipes multidisciplinares, cultura organizacional e definição de processos de tecnologia (CI/CD, KPIs, análise preditiva). Apaixonado por automação e inteligência artificial aplicada a operações, com experiência em NLP, MCPs e otimização de fluxos de trabalho. Busco sempre unir estratégia de negócio e inovação tecnológica para gerar impacto real.",
+  "about": "Head de Tecnologia com dupla expertise: GESTÃO ESTRATÉGICA de equipes multidisciplinares e ESPECIALIZAÇÃO TÉCNICA em arquiteturas SaaS escaláveis. Liderei times de até 15+ desenvolvedores na criação de plataformas enterprise para Mary Kay, Smart House e outros clientes, combinando visão de negócio com excelência técnica. Como gestor, defino roadmaps tecnológicos, implemento cultura DevOps (CI/CD, KPIs) e desenvolvo talentos. Como especialista, domino full stack (React, Node.js, Next.js) e aplico IA/automação para otimizar operações. Meu diferencial é traduzir estratégia de negócio em soluções tecnológicas que geram impacto mensurável.",
   "experiences": [
     {
-      "id": "1",
+      "id": "head-tech-1",
       "company": "A&EIGHT",
       "position": "Head of Technology",
       "period": "ago 2024 - ago 2025",
@@ -77,7 +77,7 @@ export const profileData: Profile = {
       ]
     },
     {
-      "id": "2",
+      "id": "head-tech-2",
       "company": "b8one",
       "position": "Head of Technology",
       "period": "jan 2023 - jul 2025",
@@ -90,7 +90,7 @@ export const profileData: Profile = {
       ]
     },
     {
-      "id": "3",
+      "id": "software-engineer",
       "company": "b8one",
       "position": "Software Engineer",
       "period": "mai 2020 - jan 2023",
@@ -102,7 +102,7 @@ export const profileData: Profile = {
       ]
     },
     {
-      "id": "4",
+      "id": "backend-developer",
       "company": "Appia",
       "position": "Backend Developer",
       "period": "nov 2019 - mai 2020",
@@ -114,7 +114,7 @@ export const profileData: Profile = {
       ]
     },
     {
-      "id": "5",
+      "id": "full-stack-developer",
       "company": "ACCT | ACUPULA Consulting & Technology",
       "position": "Desenvolvedor Full Stack",
       "period": "mar 2019 - nov 2019",
@@ -126,7 +126,7 @@ export const profileData: Profile = {
       ]
     },
     {
-      "id": "6",
+      "id": "senior-developer",
       "company": "Elocc",
       "position": "Desenvolvedor Pleno",
       "period": "ago 2018 - mar 2019",
@@ -138,7 +138,7 @@ export const profileData: Profile = {
       ]
     },
     {
-      "id": "7",
+      "id": "intern",
       "company": "Blinks",
       "position": "Estagiário de mídias digitais / desenvolvimento",
       "period": "mai 2017 - abr 2018",
@@ -152,21 +152,21 @@ export const profileData: Profile = {
   ],
   "education": [
     {
-      "id": "1",
-      "institution": "Universidade de São Paulo",
+      "id": "computer-science",
+      "institution": "FAM",
       "degree": "Bacharelado em Ciência da Computação",
       "period": "2017 - 2021",
       "description": "Foco em algoritmos, estruturas de dados e desenvolvimento de software"
     },
     {
-      "id": "2",
+      "id": "bootcamp",
       "institution": "Rocketseat",
       "degree": "Bootcamp Full Stack",
       "period": "2020",
       "description": "Curso intensivo de desenvolvimento full stack com React, Node.js e React Native"
     },
     {
-      "id": "3",
+      "id": "continuous-learning",
       "institution": "Alura",
       "degree": "Especialização em React e TypeScript",
       "period": "2021",

@@ -1,6 +1,7 @@
 'use client'
 
 import { profileData } from '@/data/profile'
+import { useTranslation } from '@/hooks/useTranslation'
 import { motion } from 'framer-motion'
 import { Building2, Cloud, Code, Database, ExternalLink, Github, Globe, Layers, Sparkles, Star } from 'lucide-react'
 
@@ -34,6 +35,9 @@ const clientIcons = {
 }
 
 export default function Projects() {
+  const { t, getProfileData, getProjectsData } = useTranslation()
+  const currentProfileData = getProfileData(profileData)
+  const currentProjects = getProjectsData(profileData.projects)
   return (
     <section id="projetos" className="py-20 bg-white">
       <div className="container-max section-padding">
@@ -45,14 +49,14 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Projetos Destacados
+            {t('projects.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-executive-600 to-executive-800 mx-auto"></div>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {profileData.projects.map((project, index) => (
+            {currentProjects.map((project: any, index: number) => (
               <motion.div
                 key={project.id}
                 initial={{ y: 30, opacity: 0 }}
@@ -92,9 +96,9 @@ export default function Projects() {
                   </p>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Tecnologias:</h4>
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">{t('projects.technologies')}</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => {
+                      {project.technologies.map((tech: string) => {
                         const IconComponent = techIcons[tech as keyof typeof techIcons] || Code
                         return (
                           <span
@@ -118,7 +122,7 @@ export default function Projects() {
                         className="flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 flex-1 justify-center"
                       >
                         <Github size={16} />
-                        <span className="text-sm font-medium">Código</span>
+                        <span className="text-sm font-medium">{t('projects.code')}</span>
                       </a>
                     )}
                     {project.liveUrl && (
@@ -129,7 +133,7 @@ export default function Projects() {
                         className="flex items-center space-x-2 px-4 py-2 bg-executive-700 text-white rounded-lg hover:bg-executive-800 transition-colors duration-200 flex-1 justify-center"
                       >
                         <ExternalLink size={16} />
-                        <span className="text-sm font-medium">Demo</span>
+                        <span className="text-sm font-medium">{t('projects.demo')}</span>
                       </a>
                     )}
                   </div>
@@ -147,19 +151,19 @@ export default function Projects() {
           >
             <div className="bg-gradient-to-r from-executive-50 to-executive-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Interessado em ver mais projetos?
+                {t('projects.moreProjects')}
               </h3>
               <p className="text-gray-600 mb-6">
-                Confira meu GitHub para ver todos os projetos e contribuições.
+                {t('projects.moreProjectsDesc')}
               </p>
               <a
-                href={profileData.github}
+                href={currentProfileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-executive-700 text-white rounded-lg hover:bg-executive-800 transition-colors duration-200 font-semibold"
               >
                 <Github size={20} />
-                <span>Ver no GitHub</span>
+                <span>{t('projects.viewOnGitHub')}</span>
               </a>
             </div>
           </motion.div>
