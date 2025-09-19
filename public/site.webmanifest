@@ -1,0 +1,16 @@
+{
+  "name": "Gabriel Tamura - Head de Tecnologia",
+  "short_name": "Gabriel Tamura",
+  "description": "Head de Tecnologia com 6+ anos em transformação digital e arquitetura enterprise",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#343C5A",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
