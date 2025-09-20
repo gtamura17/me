@@ -62,7 +62,7 @@ export const profileData: Profile = {
   "website": "https://www.gtamura.com",
   "github": "https://github.com/gtamura17",
   "linkedin": "https://www.linkedin.com/in/gabriel-tamura-mamiya-091ba6143/",
-  "about": "Head de Tecnologia com dupla expertise: GESTÃO ESTRATÉGICA de equipes multidisciplinares e ESPECIALIZAÇÃO TÉCNICA em arquiteturas SaaS escaláveis. Liderei times de até 15+ desenvolvedores na criação de plataformas enterprise para Mary Kay, Smart House e outros clientes, combinando visão de negócio com excelência técnica. Como gestor, defino roadmaps tecnológicos, implemento cultura DevOps (CI/CD, KPIs) e desenvolvo talentos. Como especialista, domino full stack (React, Node.js, Next.js) e aplico IA/automação para otimizar operações. Meu diferencial é traduzir estratégia de negócio em soluções tecnológicas que geram impacto mensurável.",
+  "about": "Head de Tecnologia com dupla expertise: Gestão estratégica multidisciplinares e especialização técnica em arquiteturas SaaS escaláveis. Liderei times de até 15+ desenvolvedores na criação de plataformas enterprise para Mary Kay, Smart House e outros clientes, combinando visão de negócio com excelência técnica. Como gestor, defino roadmaps tecnológicos, implemento cultura DevOps (CI/CD, KPIs) e desenvolvo talentos. Como especialista, domino full stack (React, Node.js, Next.js) e aplico IA/automação para otimizar operações. Meu diferencial é traduzir estratégia de negócio em soluções tecnológicas que geram impacto mensurável.",
   "experiences": [
     {
       "id": "head-tech-1",
